@@ -23,3 +23,6 @@ Route::get('request/', 'InsertController@getIndex')->name('request');
 
 # 確認画面
 Route::post('request/confirm', 'InsertController@confirm')->name('insert.confirm');
+
+# 確認画面
+Route::post('request/finish', 'InsertController@finish')->name('insert.finish');
