@@ -11,7 +11,8 @@ class InsertController extends Controller
     //
     public function getIndex()
     {
-        return view('insert.index');
+        $workers = Worker::orderBy('created_at', 'desc')->paginate(5);
+        return view('insert.index',['workers' => $workers]);
     }
 
     public function confirm(InsertRequest $request)
